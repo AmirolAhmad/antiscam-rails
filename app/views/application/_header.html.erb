@@ -1,0 +1,26 @@
+<nav class="navbar navbar-default" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse-01">
+        <span class="sr-only">Toggle navigation</span>
+      </button>
+      <%= link_to "AntiScam", root_path, :class => "navbar-brand" %>
+    </div>
+    <div class="collapse navbar-collapse" id="navbar-collapse-01">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="#fakelink">Products</a></li>
+        <li><a href="#fakelink">Features</a></li>
+      </ul>
+      <div class="nav navbar-nav navbar-right">
+        <div class="btn-group btn-group-sm">
+          <% if user_signed_in? %>
+            <%= link_to "Logout", destroy_user_session_path, method: "delete", :class => "btn btn-danger navbar-btn" %>
+          <% else %>
+            <%= link_to "Sign in", login_path, :class => "btn btn-info navbar-btn" %>
+            <%= link_to "Register", register_path, :class => "btn btn-primary navbar-btn" %>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
