@@ -5,6 +5,8 @@ class User < ActiveRecord::Base
 
   attr_accessor :login
 
+  has_many :scammers
+
   default_scope -> { order('users.id DESC') }
 	scope :admin, -> { where(admin: true) }
 

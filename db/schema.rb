@@ -11,7 +11,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141125131656) do
+ActiveRecord::Schema.define(version: 20141126085307) do
+
+  create_table "scammers", force: true do |t|
+    t.integer  "user_id",         null: false
+    t.string   "name",            null: false
+    t.string   "nickname",        null: false
+    t.string   "email",           null: false
+    t.integer  "age",             null: false
+    t.string   "identity_number", null: false
+    t.string   "nationality",     null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "scammers", ["user_id"], name: "index_scammers_on_user_id", using: :btree
 
   create_table "users", force: true do |t|
     t.string   "username",               default: "",    null: false
