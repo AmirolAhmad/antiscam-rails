@@ -1,12 +1,18 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Antiscam</title>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Raise your hand and help the world. If you are a victim or just want to report a scamming activities did by someone, you come to the right place">
+	<meta name="keywords" content="scammer, scam, scam activity, black money, fraud">
+	<meta name="author" content="AntiScam">
+  <title><%= (title = yield :title).blank? ? "AntiScam.me" : title %></title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
-<body>
+<body class="<%= body_class %>" data-user="<%= h current_user.try(:to_json) %>">
 	<%= render partial: "header" %>
 
 	<% if alert %>
