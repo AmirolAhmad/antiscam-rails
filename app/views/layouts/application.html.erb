@@ -11,15 +11,15 @@
 
 	<% if alert %>
 	<div class="container">
-		<div class="alert alert-danger alert-dismissible">
-			<button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+		<div class="alert alert-danger">
+			<button class="close fui-cross" data-dismiss="alert"></button>
 			<%= alert %>
 		</div>
 	</div>
 	<% elsif notice %>
 	<div class="container">
-		<div class="alert alert-warning alert-dismissible">
-			<button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+		<div class="alert alert-warning">
+			<button class="close fui-cross" data-dismiss="alert"></button>
 			<%= notice %>
 		</div>
 	</div>
