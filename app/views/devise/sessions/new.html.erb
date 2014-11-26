@@ -14,7 +14,7 @@
       <div class="form-group">
         <%= f.password_field :password, autocomplete: "off", :class => "form-control input-hg", :placeholder => "Password" %>
         <span class="form-control-feedback fui-lock"></span>
-        <%= link_to "Forgot password?", forgot_path, :class => "btn btn-link btn-xs pull-right" %>
+        <%= link_to "Forgot password?", new_user_password_path, :class => "btn btn-link btn-xs pull-right" %>
       </div>
 
       <% if devise_mapping.rememberable? -%>
@@ -33,7 +33,7 @@
 
       <div class="form-group">
         <p><small>Don't have an account? <%= link_to "Create one here", register_path %></small></p>
-        <p><small><%= link_to "Didn't receive confirmation instructions?", confirmation_path %></small></p>
+        <p><small><%= link_to "Didn't receive confirmation instructions?", new_user_confirmation_path %></small></p>
       </div>
 
     </div>

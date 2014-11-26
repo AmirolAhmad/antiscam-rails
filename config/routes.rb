@@ -5,8 +5,6 @@ Rails.application.routes.draw do
     delete 'sign_out', :to => 'devise/sessions#destroy'
     get '/login' => 'devise/sessions#new'
     get '/register' => 'devise/registrations#new'
-    get '/forgot' => 'devise/passwords#new'
-    get '/confirmation' => 'devise/confirmations#new'
   end
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
