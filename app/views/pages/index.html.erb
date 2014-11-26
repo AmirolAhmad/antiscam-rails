@@ -1,3 +1,20 @@
+<% content_for :title do %>
+	AntiScam Me
+<% end %>
+
+<% content_for :meta_tags do %>
+	<%= render :partial => 'application/meta_tags',
+						 :locals => {
+								:type => "website",
+								:title => "AntiScam Me",
+								:url => request.url,
+								:description => "Raise your hand and help the world. If you are a victim or just want to report a scamming activities did by someone, you come to the right place",
+								:canonical => request.url,
+								:og_title => "AntiScam Me",
+								:og_description => "Raise your hand and help the world. If you are a victim or just want to report a scamming activities did by someone, you come to the right place"
+						 } %>
+<% end %>
+
 <div class="page-header">
   <h1>Pages#index <small>Find me in app/views/pages/index.html.erb</small></h1>
 </div>
