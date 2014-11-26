@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-
   devise_for :users
   devise_scope :user do
     delete 'sign_out', :to => 'devise/sessions#destroy'
@@ -11,6 +10,8 @@ Rails.application.routes.draw do
 
   # You can have the root of your site routed with "root"
   root 'pages#index'
+
+  resources :scammers
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
